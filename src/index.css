@@ -1,36 +1,103 @@
 @import "tailwindcss";
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
   body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    background-color: #08080a;
-    color: #ffffff;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #050507;
+    color: #f4f4f5;
     overflow-x: hidden;
   }
 }
 
 .font-orbitron {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Orbitron', -apple-system, sans-serif;
 }
 
-@keyframes pulseGlow {
-  0%, 100% {
-    opacity: 0.4;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.75;
-    transform: scale(1.08);
-  }
+.font-syne {
+  font-family: 'Syne', sans-serif;
 }
 
-.animate-glow {
-  animation: pulseGlow 6s ease-in-out infinite;
+.font-space {
+  font-family: 'Space Grotesk', sans-serif;
 }
 
-.backdrop-blur-glass {
-  background: rgba(18, 18, 22, 0.65);
+/* Custom Luxury Glassmorphism */
+.glass-panel {
+  background: rgba(12, 12, 16, 0.72);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-subtle {
+  background: rgba(20, 20, 26, 0.45);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Subtle Glowing animations */
+@keyframes atmosphericPulse {
+  0%, 100% {
+    opacity: 0.18;
+    transform: translate(-50%, 0) scale(1);
+  }
+  50% {
+    opacity: 0.32;
+    transform: translate(-50%, 0) scale(1.1);
+  }
+}
+
+.animate-atmosphere {
+  animation: atmosphericPulse 8s ease-in-out infinite;
+}
+
+@keyframes hotspotPing {
+  0% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(255, 145, 0, 0.7);
+  }
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 14px rgba(255, 145, 0, 0);
+  }
+  100% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(255, 145, 0, 0);
+  }
+}
+
+.hotspot-pulse {
+  animation: hotspotPing 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #060608;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+/* Text stroke utilities */
+.stroke-text {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.15);
+  color: transparent;
 }
