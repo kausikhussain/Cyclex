@@ -1,5 +1,14 @@
 import { formatINR } from '../utils/formatters';
 
+// Import assets directly so Vite bundles and fingerprints them for any deployment target
+import spectraHero from '../assets/images/spectra.jpg';
+import spectraAngle from '../assets/images/spectra-angle.jpg';
+import spectraVertical from '../assets/images/spectra-vertical.jpg';
+import spectraFront from '../assets/images/spectra-front.jpg';
+import ridgeHero from '../assets/images/ridge.jpg';
+import vortexHero from '../assets/images/vortex.jpg';
+import weightGraphic from '../assets/images/weight-rider-graphic.jpg';
+
 const bikes = [
   {
     id: "spectra",
@@ -16,10 +25,10 @@ const bikes = [
     depositFormatted: "₹9,999",
     emiFormatted: "₹10,416/month*",
     about: "Engineered for speed, control, and Indian terrain resilience. From urban flyovers to Himalayan gradients, dominate every ride with Spectra.",
-    heroImage: "/images/spectra.jpg",
-    angleImage: "/images/spectra-angle.jpg",
-    verticalImage: "/images/spectra-vertical.jpg",
-    frontImage: "/images/spectra-front.jpg",
+    heroImage: spectraHero,
+    angleImage: spectraAngle,
+    verticalImage: spectraVertical,
+    frontImage: spectraFront,
     accentColor: "#ff9100",
     accentSecondary: "#ff6d00",
     themeClass: "orange",
@@ -33,7 +42,7 @@ const bikes = [
       weight: "32 lbs",
       weightKg: "14.5 kg",
       label: "APPROX. WEIGHT",
-      graphic: "/images/weight-rider-graphic.jpg",
+      graphic: weightGraphic,
       note: "FEATHERLIGHT FRAME",
       desc: "A carbon monocoque shaves every unnecessary gram, so the Spectra climbs like a hardtail and descends like a downhill rig — without the usual weight trade-off."
     },
@@ -279,10 +288,10 @@ const bikes = [
     depositFormatted: "₹9,999",
     emiFormatted: "₹9,583/month*",
     about: "Precision tuned for razor-sharp handling and raw downhill velocity. Ridge gives you relentless confidence through rock gardens, drops, and alpine switchbacks.",
-    heroImage: "/images/ridge.jpg",
-    angleImage: "/images/spectra-angle.jpg",
-    verticalImage: "/images/spectra-vertical.jpg",
-    frontImage: "/images/spectra-front.jpg",
+    heroImage: ridgeHero,
+    angleImage: spectraAngle,
+    verticalImage: spectraVertical,
+    frontImage: spectraFront,
     accentColor: "#ff3b5c",
     accentSecondary: "#e11d48",
     themeClass: "red",
@@ -296,7 +305,7 @@ const bikes = [
       weight: "31.4 lbs",
       weightKg: "14.2 kg",
       label: "APPROX. WEIGHT",
-      graphic: "/images/weight-rider-graphic.jpg",
+      graphic: weightGraphic,
       note: "COMPETITION CHASSIS",
       desc: "Ultra-high modulus carbon weave engineered specifically for competitive downhill and enduro riding where every millisecond and gram dictates victory."
     },
@@ -542,10 +551,10 @@ const bikes = [
     depositFormatted: "₹9,999",
     emiFormatted: "₹12,083/month*",
     about: "The ultimate hyper-performance all-mountain predator. Combines maximum battery range with relentless 100Nm torque and adaptive electronic suspension.",
-    heroImage: "/images/vortex.jpg",
-    angleImage: "/images/spectra-angle.jpg",
-    verticalImage: "/images/spectra-vertical.jpg",
-    frontImage: "/images/spectra-front.jpg",
+    heroImage: vortexHero,
+    angleImage: spectraAngle,
+    verticalImage: spectraVertical,
+    frontImage: spectraFront,
     accentColor: "#00e676",
     accentSecondary: "#00c853",
     themeClass: "green",
@@ -559,7 +568,7 @@ const bikes = [
       weight: "32.8 lbs",
       weightKg: "14.8 kg",
       label: "APPROX. WEIGHT",
-      graphic: "/images/weight-rider-graphic.jpg",
+      graphic: weightGraphic,
       note: "ADAPTIVE AI CHASSIS",
       desc: "Integrated micro-valves adjust damper compression 500 times per second based on predictive terrain sensor readings."
     },
